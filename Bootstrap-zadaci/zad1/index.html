@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zad1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"></script>
+    <style>
+        #top-section {
+            background: url("photos/cover.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+        }
+
+        #get-in-touch {
+            background-color: #E5E4E2;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row  flex-column position-relative" id="top-section">
+        <div class="w-100 h-100 bg-dark opacity-50 position-absolute"></div>
+        <div class="z-3" style="height: 100px">
+            <nav class="navbar navbar-expand-lg d-flex justify-content-between fw-bold z-3">
+                <div class="container-fluid z-3">
+                    <a class="navbar-brand " href="#">
+                        <img src="/photos/logo.png" class="img-fluid" style="width: 150px" alt="Responsive image">
+                    </a>
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon "></span>
+                    </button>
+                    <div class="collapse navbar-collapse z-3" id="navbarNav">
+                        <ul class="navbar-nav  w-100 ms-auto justify-content-evenly z-3">
+                            <li class="nav-item ">
+                                <a class="nav-link active text-primary " aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="#">TOURS</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="#">ABOUT</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="#">ADVANTAGES</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="#">BLOG</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link " href="#">CONTACTS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class=" col-8 flex-grow-1  mt-5 p-0  z-3" style="margin-left: 90px">
+            <p class="text-light text-begining display-4 fw-normal">The Best Trips Around Iceland Begin With Us</p>
+            <div class="d-flex flex-row gap-2 mt-3">
+                <div class="dropdown flex-fill">
+                    <button class="btn btn-light p-3 w-100 dropdown-toggle text-secondary" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        Date
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                        Pick a Date
+                    </ul>
+                </div>
+                <div class="dropdown flex-fill">
+                    <button class="btn btn-light p-3 w-100 dropdown-toggle text-secondary" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        Your Price Range
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                        Enter Price Range
+                    </ul>
+                </div>
+                <div class="flex-fill">
+                    <button type="button" class="btn btn-primary p-3">SEARCH TOURS</button>
+                </div>
+            </div>
+            <div class="d-flex flex-row gap-3 mt-5 justify-content-center">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                         class="bi bi-facebook text-light" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                         class="bi bi-linkedin text-light" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                         class="bi bi-google text-light" viewBox="0 0 16 16">
+                        <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row  mt-5">
+        <p class="text-center display-5 fw-bold">Best Sellers</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-left: 60px; margin-right: 60px;">
+        <div class="col">
+            <div class="card h-100">
+                <img src="photos/sl1.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between ">
+                        <span class="text-secondary">7 days/6 nights</span>
+                        <span class="text-primary">From $1000</span>
+                    </div>
+                    <p class="card-text">Winter Wonders and Delicious Detours</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="photos/sl2.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between ">
+                        <span class="text-secondary">3 days/2 nights</span>
+                        <span class="text-primary">From $500</span>
+                    </div>
+                    <p class="card-text">South Shore and Glacier Lagoon Mini-Tour</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="photos/sl3.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between ">
+                        <span class="text-secondary">1 night</span>
+                        <span class="text-primary">From $800</span>
+                    </div>
+                    <p class="card-text">Northen Lights Mystery</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="photos/sl4.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between ">
+                        <span class="text-secondary">7 days/6 nights</span>
+                        <span class="text-primary">From $900</span>
+                    </div>
+                    <p class="card-text">Golden Circle Tour</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="photos/sl5.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between ">
+                        <span class="text-secondary">7 days/6 nights</span>
+                        <span class="text-primary">From $1200</span>
+                    </div>
+                    <p class="card-text">South Iceland Winter Explorer - Super Jeep Adventure</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="photos/sl6.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between ">
+                        <span class="text-secondary">7 days/6 nights</span>
+                        <span class="text-primary">From $1500</span>
+                    </div>
+                    <p class="card-text">South Iceland Express Road Trip</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5" id="get-in-touch">
+        <div class="col-6 d-flex flex-column justify-content-center p-5">
+            <form>
+                <h4>Get in Touch</h4>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="mb-3 m-">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Message" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            </form>
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-evenly align-items-center p-5">
+            <h4>Contact Information</h4>
+            <h5>1-8001234-567</h5>
+            <p>info@info.org</p>
+            <div class="d-flex flex-row gap-3 justify-content-center ">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-facebook text-dark" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-linkedin text-dark" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-google text-dark" viewBox="0 0 16 16">
+                        <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row bg-primary text-white d-flex">
+        <h5 CLASS="text-center p-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle"
+                 viewBox="0 0 16 16">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+            </svg>
+            FINKI - DNICK 2025
+        </h5>
+
+    </div>
+</div>
+</body>
+</html>
