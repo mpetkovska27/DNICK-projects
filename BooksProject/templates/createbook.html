@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Add New Book</h3>
+
+<form method="post">
+    {% csrf_token %}
+{#    token za bezbednost#}
+    {{ form.as_p }}
+{#    izrenderiraj vo paragraf#}
+
+    <button type="submit">Add book</button>
+</form>
+
+</body>
+</html>
