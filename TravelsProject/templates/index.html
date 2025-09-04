@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travels</title>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.js' %}"></script>
+<style>
+    #top-section{
+            background: url("https://t3.ftcdn.net/jpg/01/20/96/54/360_F_120965458_D4laIqLTBdK7pX9QFiH6n1BkM4Annreq.jpg") no-repeat;
+            background-size: cover;
+            height: 600px;
+        }
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+    <div id="top-section" class="d-flex flex-column position-relative">
+        <div class="w-100 h-100 bg-dark opacity-50 position-absolute z-1">  </div>
+        <div class="z-2 position-relative m-5 p-5 text-white">
+            <p class="display-4">HONEST, QUALITY WORK</p>
+            <p class="display-4 fw-semibold">AT AFFORDABLE PRICES</p>
+            <p>We provide top-notch service for import and domestic car repairs.Servicing Brakes, Exhaust, Tune Ups, Engine Repairs, Electrical and A.C Systems.</p>
+<button class="btn btn-primary p-2 px-5">GET FREE QUOTES</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row mt-3 row-gap-3">
+       {% for travel in travels %}
+        <div class="col-4 justify-content-center d-flex">
+            <div class="card" style="width: 18rem;">
+  <img src="{{ MEDIA_URL }}{{ travel.image.url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{travel.destination}}</h5>
+    <p class="card-text">The price is {{ travel.price }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row bg-primary text-white d-flex">
+        <h5 CLASS="text-center p-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle"
+                 viewBox="0 0 16 16">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+            </svg>
+            FINKI - DNICK 2025
+        </h5>
+
+    </div>
+</div>
+</body>
+</html>
+
+
