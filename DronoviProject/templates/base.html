@@ -1,10 +1,12 @@
-{% load static%}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Dronovi</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.js' %}"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -22,9 +24,14 @@
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
       </div>
     </div>
+
   </div>
 </nav>
-
+{% block content %}
+{% endblock %}
 </div>
+<footer class="d-flex justify-content-center p-4 mt-5"  style="background: #0d6efd">
+    <p class="text-light">Copyright HCI 2026</p>
+</footer>
 </body>
 </html>

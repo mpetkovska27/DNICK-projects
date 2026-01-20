@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid">
+    <div class="row row-gap-3">
+        <div class="col-md-5">
+            <h2>{{ dron.model }}</h2>
+            <p>Тип: <strong>{{ dron.get_tip_display }}</strong></p>
+            <p>Цена: <strong>{{ dron.cena }} ден.</strong></p>
+            {% if dron.fotografija %}
+                <img src="{{ dron.fotografija.url }}" class="img-fluid rounded border">
+            {% endif %}
+        </div>
+    </div>
+    <div class="row row-gap-3">
+        <div class="col-md-5">
+            <p class="display-4">Резервации: </p>
+            <table class="table table-bordered table-striped">
+                <thead class="table-secondary">
+                    <tr>
+                        <th>Датум</th>
+                        <th>Термин</th>
+                        <th>Статус</th>
+                        <th>Пилот</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for r in rezervacii %}
+                    <tr>
+                        <td>{{ r.datum }}</td>
+                        <td>{{ r.get_termin_display }}</td>
+                        <td>{{ r.get_status_display }}</td>
+                        <td>{{ r.odgovoren }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr><td colspan="4">Нема резервации.</td></tr>
+                {% endfor %}
+                </tbody>
+            <a href="{% url 'add_rezervacija' %}" class="btn btn-success">Додади Нова</a>
+            </table>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

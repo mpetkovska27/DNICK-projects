@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{#    hero section #}
+    <div class="container-fluid " style="background: #0a58ca; height: 500px">
+    <div class="row align-items-center">
+        <div class="col-md-5">
+            <h1 class="display-4 fw-bold">Дрон Сервис Скопје</h1>
+            <p class="lead">Професионално управување со флота.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{% static 'download (1).jpg' %}" class="img-fluid rounded shadow" alt="Dron">
+        </div>
+        <div class="col-md-5">
+            <a href="{% url 'add_rezervacija' %}"class="btn btn-secondary">Додади Резервација</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="container-fluid">
+{#    info section #}
+    <div class="row row-gap-3 w-100 align-items-center"  style="height: 100px;background: rgb(202,243,243)">
+        <h1>Дрон Флоти</h1>
+        <p class="lead">Преглед на сите достапни летала по категории.</p>
+    </div>
+
+{#    karticki#}
+    <div class="row row-gap-3 w-100 align-content-center justify-content-center">
+        {% for tip,lista_dronovi in grupirani_tipovi.items %}
+            <h3>{{ lista_dronovi.0.get_tip_display }}</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for dron in lista_dronovi %}
+                <div class="col">
+{#                kopirame karticka#}
+                <div class="card-group">
+  <div class="card">
+      {% if dron.fotografija %}
+             <img src="{{MEDIA_URL}}{{ dron.fotografija.url }}" class="card-img-top" alt="dronce">
+      {% endif %}
+    <div class="card-body">
+      <h5 class="card-title"><a href="{% url 'details' dron.id %}">{{ dron.seriski_broj }}</a></h5>
+      <p class="card-text">{{ dron.opis }}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-body-secondary">Last updated 3 mins ago</small>
+    </div>
+  </div></div>
+                {% endfor %}
+        </div>
+
+
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+
+
+
+{% endblock %}
+
+
+
